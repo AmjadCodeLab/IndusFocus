@@ -1,17 +1,25 @@
-var PrimeTest = function(num){
-    // checking for the boundry value
-   if(num<=1){
-       console.log("Number is not Prime");
-   }
-   // check for prime or not 
-   else if (num%2===0){
-       console.log("Number is Prime ");
-   }
-   else{
-       console.log("Number is Not Prime");
-   }
-
+var PrimeNumber = function(num){
+    //  // checking for the boundry value
+  if (num===1)
+  {
+    return false;
+  }
+  else if(num === 2)
+  {
+    return true;
+    // check for prime or not 
+  }else
+  {
+    for(var x = 2; x < num; x++)
+    {
+      if(num % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
 }
 
-PrimeTest(6);
-PrimeTest(7);
+console.log(PrimeNumber(4));
+console.log(PrimeNumber(7));
